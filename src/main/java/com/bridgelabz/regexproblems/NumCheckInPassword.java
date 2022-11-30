@@ -1,7 +1,8 @@
 package com.bridgelabz.regexproblems;
 import java.util.Scanner;
 import java.util.regex.Pattern;
-public class FirstUpperCaseCheck {
+
+public class NumCheckInPassword {
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
 		// Method To Check First Name With Regex Start With Cap And 3 Min. Character
@@ -13,7 +14,7 @@ public class FirstUpperCaseCheck {
 		String mail = scan.nextLine();
 		System.out.println("Enter The Mobile Number With County Code : ");
 		String mobileNumber = scan.nextLine();
-		System.out.println("Enter the valid password: ");
+		System.out.println("Enter the at least one numeric Number: ");
 		String password = scan.nextLine();
 
 		if (Pattern.matches("^[A-Z][a-z]{2,}", firstName)) {
@@ -40,8 +41,8 @@ public class FirstUpperCaseCheck {
 		} else {
 			System.out.println("False");
 		}
-		// Password at least one upper case
-		if (Pattern.matches("^[A-Z]+[a-z].{7}", password)) {
+		// Numeric number in password
+		if (Pattern.matches("^[A-Z][a-z0-9]{7}", password)) {
 			System.out.println("True");
 		} else {
 			System.out.println("False");

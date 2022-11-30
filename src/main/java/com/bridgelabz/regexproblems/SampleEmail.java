@@ -1,7 +1,8 @@
 package com.bridgelabz.regexproblems;
 import java.util.Scanner;
 import java.util.regex.Pattern;
-public class SpecialCharCheck {
+
+public class SampleEmail {
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
 		// Method To Check First Name With Regex Start With Cap And 3 Min. Character

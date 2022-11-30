@@ -1,8 +1,7 @@
 package com.bridgelabz.regexproblems;
 import java.util.Scanner;
 import java.util.regex.Pattern;
-
-public class NumCheckInPassword {
+public class SpecialCharCheck {
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
 		// Method To Check First Name With Regex Start With Cap And 3 Min. Character
@@ -41,8 +40,8 @@ public class NumCheckInPassword {
 		} else {
 			System.out.println("False");
 		}
-		// Numeric number in password
-		if (Pattern.matches("^[A-Z][a-z0-9]{7}", password)) {
+		// Special Character Password
+		if (Pattern.matches("^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#&()–[{}]:;',?/*~$^+=<>]).{8,20}$", password)) {
 			System.out.println("True");
 		} else {
 			System.out.println("False");
